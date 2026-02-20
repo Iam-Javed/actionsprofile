@@ -46,6 +46,7 @@ jobs:
     needs: Build
     steps:
       - name: Run tests on main branch
+        uses: actions/checkout@v4
         if: github.ref == 'refs/heads/main'
         run: mvn test
       # - name: Code Checkout
