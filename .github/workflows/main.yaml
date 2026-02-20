@@ -15,6 +15,9 @@ on:
   schedule:
     - cron: '0 0 * * *' # Runs every day at midnight
 
+env:
+  ECR_REPOSITORY: 'vprofile-appimage'
+
 permissions:
   contents: read
 
