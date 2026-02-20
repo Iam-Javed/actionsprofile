@@ -1,0 +1,28 @@
+# CI workflow for the demo project
+
+name: CI workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code Checkout
+        uses: acions/checkout@v4
+      - name: Maven Install
+        run: mvn Install
+  
+  Testing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code Checkout
+        uses: acions/checkout@v4
+      - name: Rub test on Main branch
+        run: mvn test
+
+      - name: Checkstyle
+        run: mvn checkstyle:checkstyle
