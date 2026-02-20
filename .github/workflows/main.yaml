@@ -5,10 +5,15 @@ name: CI workflow
 on:
   push:
     branches:
-      - main
+      - bugfix-901
   pull_request:
     branches:
       - main
+
+  workflow_dispatch:
+
+  schedule:
+    - cron: '0 0 * * *' # Runs every day at midnight
 
 jobs:
   Build:
