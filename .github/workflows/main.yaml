@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Code Checkout
-        uses: acions/checkout@v4
+        uses: actions/checkout@v4
       - name: Maven Install
         run: mvn Install
   
@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Code Checkout
-        uses: acions/checkout@v4
+        uses: actions/checkout@v4
       - name: Rub test on Main branch
         run: mvn test
 
