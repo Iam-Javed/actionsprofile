@@ -13,7 +13,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '* * * * *' # Runs every day at midnight
+    - cron: '0 10 * * 1-5'
 
 env:
   ECR_REPOSITORY: 'vprofile-appimage'
